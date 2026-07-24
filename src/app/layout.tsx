@@ -7,15 +7,18 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" }
 
 export const metadata: Metadata = {
   title: "Sumit Mahajan | Software Engineer II @ JPMorgan Chase",
-  description: "Quant Development | Systems Design | Distributed Systems | 4+ years building high-scale systems at JPMorgan Chase",
+  description: "Backend & Full-Stack Engineer | C# / Python / React | GenAI & RAG | 4+ years building high-scale financial systems at JPMorgan Chase.",
+  openGraph: {
+    title: "Sumit Mahajan | Software Engineer II @ JPMorgan Chase",
+    description: "Backend & Full-Stack Engineer | C# / Python / React | GenAI & RAG",
+    type: "website",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased bg-black text-white`}>
-        {children}
-      </body>
+      <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased bg-black text-white`}>{children}</body>
     </html>
   )
 }
